@@ -1,0 +1,23 @@
+# Ignore virtual environments
+ocr/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Static files if not needed
+static/
+test/
+
+# Logs
+*.log
+
+# Node modules (if present)
+node_modules/
+
+# Git and version control files
+.git/
+
+.env
+.DS_Store
