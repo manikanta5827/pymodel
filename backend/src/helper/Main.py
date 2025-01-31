@@ -23,7 +23,6 @@ async def process_images(image_paths, include_details=False):
     try:
         texts = await extract_texts_from_images(image_paths)
         combined_text = "\n".join(texts)
-        print(f'text : {combined_text}')
         prompt = generate_prompt(combined_text, include_details)
         structured_data = process_with_gen_ai(prompt)
         parsed_data = jsonParser(structured_data)

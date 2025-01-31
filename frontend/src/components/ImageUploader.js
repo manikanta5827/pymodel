@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DropzoneUploader from "../helper/DropzoneUploader";
-import WebcamCapture from "../helper/WebcamCapture";
+// import WebcamCapture from "../helper/WebcamCapture";
 
 const ImageUploader = ({ onImageUpload }) => {
   const [includeDetails, setIncludeDetails] = useState(false);
@@ -39,7 +39,7 @@ const ImageUploader = ({ onImageUpload }) => {
       <DropzoneUploader onUpload={handleDropzoneUpload} />
 
       <h2 className="text-lg font-bold mt-4 mb-2">Capture from Webcam</h2>
-      <WebcamCapture onCapture={handleWebcamUpload} />
+      {/* <WebcamCapture onCapture={handleWebcamUpload} /> */}
 
       <label className="flex items-center space-x-2 mt-4">
         <input

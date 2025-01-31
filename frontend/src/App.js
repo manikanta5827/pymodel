@@ -16,11 +16,10 @@ function App() {
     formData.append("includeDetails", includeDetails);
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/api/food-data", formData, {
+      const response = await axios.post("http://127.0.0.1:8000/api/food-data", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-
-      setResult(response.data); // Store backend response for display
+      typeof response.data === "string" ? setResult(JSON.parse(response.data)) : setResult(response.data)
     } catch (error) {
       console.error("Error uploading images:", error);
       alert("Error processing images. Please try again.");

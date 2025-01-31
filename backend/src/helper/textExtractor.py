@@ -63,7 +63,7 @@ def extract_text_from_image(image_path):
         preprocessed_img_bgr = cv2.cvtColor(preprocessed_img, cv2.COLOR_GRAY2BGR)
 
         # Perform OCR using EasyOCR
-        reader = easyocr.Reader(['en'], gpu=True)
+        reader = easyocr.Reader(['en'], gpu=False)
         result = reader.readtext(preprocessed_img)
 
         # Extract text from OCR results
